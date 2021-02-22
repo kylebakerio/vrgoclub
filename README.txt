@@ -2,4 +2,4 @@
 
 View it at:
 
-[http://vrgo.club](http://vrgo.club)
+http://vrgo.club
