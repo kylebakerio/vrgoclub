@@ -3058,7 +3058,8 @@ input, select, textarea {
 
 		.spotlight:before {
 			background-image: url("images/overlay.png");
-			content: '';
+			/*content: ''; */
+			/* kyle: removed this rule, makes images look faded out in a kind of unpleasant way? */
 			display: block;
 			height: 100%;
 			left: 0;
