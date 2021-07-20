@@ -18,6 +18,14 @@
 			xsmall:   [ null,      '480px'  ]
 		});
 
+	// $(window).on("load", function () {
+	//   alert("Window Loaded.");
+	// }); 
+
+	// $(document).ready(function() {
+	//   alert("Dom Loaded.");
+	// });
+
 	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
