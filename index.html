@@ -163,11 +163,12 @@
 
 			<!-- Five -->
 				<section id="five" class="wrapper style2 special fade">
-					<div id="email-form" class="container">
+					<div class="container">
 						<header>
 							<h2>Interested?</h2>
 							<p>I'm trying to gauge interest in this project; if you sign up, it lets me know you'd use this if I released it. I built this for my friends and me, but if there's interest, I'd love to build it out further. I'm just a random guy who hates spam as much as you do--if I ever send you an email, it'll be rare, short, and to the point.</p>
 						</header>
+						<div id="email-form"></div> <!-- outside of 'section' to get full width --> 
 						<!-- <iframe src="https://cdn.forms-content.sg-form.com/c0be14ea-e963-11eb-abb9-d604d5807f80?innerframe=true"/> -->
 						<!-- <form method="post" action="#" class="cta">
 							<div class="row gtr-uniform gtr-50">
@@ -177,6 +178,7 @@
 						</form> -->
 					</div>
 				</section>
+
 
 			<!-- Footer -->
 				<footer id="footer">
@@ -197,7 +199,8 @@
 
 		<script>
 			setTimeout(() => {
-				document.querySelector('#email-form').insertAdjacentHTML('beforeend', ' <iframe style="width:700px; height: 500px;" src="https://cdn.forms-content.sg-form.com/c0be14ea-e963-11eb-abb9-d604d5807f80?innerframe=true"/> ');
+				maxWidth = window.innerWidth < 400 ? window.innerWidth : 400
+				document.querySelector('#email-form').insertAdjacentHTML('beforeend', `<iframe scrolling=no style="width:100%; max-width:500px; height: 500px; overflow-x: hidden; overflow: hidden;" src="https://cdn.forms-content.sg-form.com/c0be14ea-e963-11eb-abb9-d604d5807f80?innerframe=true"/> `);
 			}, 2000)
 		</script>
 
