@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "@sendgrid/mail": "^7.4.5"
+  },
+  "scripts": {
+    "start": "npx http-server",
+    "tunnel": "ngrok http 8080",
   }
 }
