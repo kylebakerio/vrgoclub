@@ -111,7 +111,8 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e44c65;
+		/*color: #e44c65;*/
+		color: #fffb61;
 		text-decoration: none;
 	}
 
@@ -2898,7 +2899,8 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #e44c65;
+			/*background-color: #e44c65;*/
+			background-color: #3989c3;
 			box-shadow: none;
 			color: #ffffff !important;
 		}
@@ -3202,7 +3204,8 @@ input, select, textarea {
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			/*background: #e44c65;*/
+			background: #3989c3;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
