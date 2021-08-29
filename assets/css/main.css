@@ -2519,6 +2519,19 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
+	
+	/* added by kyle, experiment */
+	.video.fit {
+		display: block;
+		margin: 0 0 2em 0;
+	}
+		
+	@media (max-width: 480px) {
+		.video.fit{
+			width: 100%;
+		}
+	}
+
 		.image:before {
 			content: '';
 			display: block;
@@ -2570,17 +2583,12 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
+		}
+
+		.image.fit img {
 			width: 100%;
 		}
 
-			.image.fit img {
-				width: 100%;
-			}
-
-			/* added by kyle, experiment */
-			.image.fit video {
-				width: 100%;
-			}			
 
 /* List */
 
