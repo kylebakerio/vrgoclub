@@ -10,7 +10,6 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-
 		<!-- Meta tags for SEO and social sharing -->
 		<link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
 		<meta
@@ -30,7 +29,44 @@
 		  content="https://vrgo.club/images/pic02.png"
 		/>
 		<meta name="twitter:card" content="Play go online, in VR, cross-platform." />
+		<style>
+			/*
+				custom styles by kyle
+			*/
+			/* video parallax concept experiment, https://stackoverflow.com/a/50972282/4526479 */
+/*			#vid-container {
+			  position: relative;
+			  width: 100%;
+			  height: 100%;
+			}
 
+			#vid-content {
+			  position: absolute;
+			  top: 0;
+			}
+
+			#background-video {
+			  position: fixed;
+			  right: 0;
+			  bottom: 0;
+			  width: 100%;
+			  height: 100%;
+			}*/
+
+
+
+			/*.ParallaxVideo{ 
+			    height: 300px;
+			    padding-bottom: 50px;
+			    padding-top: 50px; 
+			}
+			.ParallaxVideo video{ 
+			    min-width: 100%;
+			    position: fixed;
+			    top:0;
+			    z-index: -999;
+			}*/
+		</style>
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -124,14 +160,14 @@
 							<h2>Multi-platform with WebXR</h2>
 							<p>The power of native graphics, the portability of the web</p>
 						</header>
-						<p>WebXR makes updates instant and broad compatibility possible, which means more players for you, and guaranteed support for your platform--whatever that is. Cross-platform functionality has been built in from the beginning, and this part is pretty much ironed out.</p>
-						<p>Working on all platforms:</p>
+						<p>WebXR makes updates instant and broad compatibility possible, which means more players for you, and guaranteed support for your platform--whatever that is. <b>Cross-platform</b> functionality has been baked-in from the beginning!</p>
+						<p>Now working on virtually all platforms:</p>
 						<ul>
-							<li>Oculus Quest</li>
-							<li>Google Cardboard (gaze, button, & controller support)</li>
-							<li>Desktop (Mouse & Keyboard)</li>
-							<li>PCVR (beta testers needed!)</li>
-							<li>Phone (lowest tier support, but it is fully playable!)</li>
+							<li>Quest/Quest 2 (including hand tracking!)</li>
+							<li>Google Cardboard (controller optional)</li>
+							<li>Desktop (mouse, custom hotkeys)</li>
+							<li>PCVR (but more beta testers welcome!)</li>
+							<li>Phone (including 6dof AR spectator mode!)</li>
 						</ul>
 						<ul class="actions">
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
@@ -142,58 +178,85 @@
 
 			<!-- Three -->
 				<section id="three" class="spotlight style3 left">
-					<span class="image fit main bottom"><img src="images/pic04.png" alt="" /></span>
+					<!-- <span class="image fit main bottom"><img src="images/pic04.png" alt="" /></span> -->
+					<span class="image fit main"><img src="images/katago-poster-game-fancy.png" alt="" /></span>
 					<div class="content">
 						<header>
 							<h2>Sync with Online Go Servers</h2>
 							<p>Always someone to play with</p>
 						</header>
 						<p>Compatibility with online-go.com was in the original design, and compatibility with other servers will be added according to demand. Whether your opponent is in VR or not, you can still enjoy your game with the sense of distraction-free presence the game deserves.</p>
+						<p><i>(While not yet implemented, this is a core goal of the app. Implementation is expected late 2021!)</i></p>
 						<ul class="actions">
 							<!-- <li><a href="#" class="button">Learn More</a></li> -->
 						</ul>
 					</div>
+					<a href="#two-two" class="goto-next scrolly">Next</a>
+				</section>
+
+				<!-- Two -->
+				<section id="two-two" class="spotlight style2 right">
+					<!-- <span class="image fit main"><img src="images/pic03.png" alt="" /></span> -->
+					<!-- <span class="image fit main"><img src="images/in-game-quest-heatmap.jpg" alt="" /></span> -->
+					<span class=""> 
+						<!-- class image just adds a hazy overlay -->
+						<!-- class fit is close to what we want, makes width 100% which feels right, except shows top of video instead of center. transform:translateY(-50%) works on full screen width, but looks wrong on narrower screens. -->
+						<!-- class main means display:none, and then JS probably grabs the src and places it as background-image, which won't work for us -->
+						<video loop="loop" muted="muted" autoplay="autoplay" src="videos/in-vr-1.mp4" alt="" />
+					</span>
+					<div class="content">
+						<header>
+							<h2>Enter KataGo's World</h2>
+							<p></p>
+						</header>
+						<p>The most compelling KataGo Interface imaginable--an instructor and an opponent who is always available. Finally, you can feel its presence! Instead of dealing with a cryptic UI, get clear, simple insight and feedback.</p>
+						<p>Get an immediate intuitive understanding of the board through KataGo's eyes with <b>live generated heatmaps</b>.</p>
+						<p>See what moves were impactful by seeing the <b>effect on win probability each move made</b>. </p>
+						<p>See the <b>predicted score</b>.</p>
+						<p>All of this is available in any game, whether reviewing alone, playing with KataGo, playing with a friend, or spectating.</p>
+					</div>
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
+
 
 			<!-- Four -->
 				<section id="four" class="wrapper style1 special fade-up">
 					<div class="container">
 						<header class="major">
-							<h2>Currently in functional Alpha</h2>
-							<p>Roadmap</p>
+							<h2>Nearing early test-release</h2>
+							<p>Features</p>
 						</header>
 						<div class="box alt">
 							<div class="row gtr-uniform">
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-hand-pointer"></span>
 									<h3>Hand Tracking+</h3>
-									<p>Grab a stone and place it yourself, or with hand tracking. Not your cup of tea? Use laser-pointer style (working), or joystick mode (working).</p>
+									<p>Because every possible platform is supported, so is every possible input. In a Quest? Use controllers, <b>or controller-free hand tracking</b>, to grab place stones. VR "Laser" controls, mouse, joystick, and arrow keys also work!</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-cubes"></span>
 									<h3>Beautiful hand-crafted 3d Assets</h3>
-									<p>Volunteer work from incredible 3d artist @AdamR means playing on the nicest board you've ever seen.</p>
+									<p>Volunteer work from incredible 3d artist @AdamR. A full custom goban, bowls, and stones. (3d artist? Contributions welcome!)</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-mountain"></span>
 									<h3>Play <i>Anywhere</i></h3>
-									<p>The vision of this app is to play on a mountaintop, by a lack, in the room of Yugen--wherever you want.</p>
+									<p>The vision of this app is to play on a mountaintop, by a lake, in the room of Yugen--wherever you want. Context matters--get lost in the game. Or watch the sunrise together.</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-border-none"></span>
 									<h3>Any board size, made real!</h3>
-									<p>Feel like playing a 31x31 game? Now you can really see one in front of your eyes.</p>
+									<p>Feel like playing a 31x31 game? Or going historical and trying out a 17x17? Now you can blur reality, and really <i>experience</i> playing on one, feeling the sense of scale in front of you.</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-brain"></span>
 									<h3>Play AI in VR</h3>
-									<p>Finally, you can sit across the board from katago.</p>
+									<p>Currently features working KataGo (AI) integration! See live generated heatmaps, get suggested moves, or just play a game with a superhuman intelligence. Or watch it play itself!</p>
 								</section>
 								<section class="col-4 col-6-medium col-12-xsmall">
 									<span class="icon solid alt major fa-tv"></span>
 									<h3>Watch live games</h3>
-									<p>Now you can sit by the table while pros play live.</p>
+									<p>Online-go.com integration will mean watching pro-games (or any game) in a whole new way--sitting by the board. See full KataGo stats+heatmap. Hang out in VR and view the online-go.com kibbitz. Live audio-hangout with other VR viewers. Even watch a simultaneous video livestream.</p>
 								</section>
 							</div>
 						</div>
@@ -244,7 +307,8 @@
  -->
 				<section id="seven" class="wrapper style2 special fade">
 					<header>
-						<h2>Interested?</h2>
+						<h2>Supporter-only alpha-release coming soon!</h2>
+						<p><i>(For real, like, probably around November 2021.)</i></p>
 					</header>
 					<div class="container">
 						<div class="box alt">
@@ -252,10 +316,10 @@
 								<section class="col-6 col-12-medium">
 									<header>
 										<h2>Get Updates</h2>
-										<p>If you sign up, it lets me know I should keep working on it. I built this for personal use and as a fun project, but the more people that express interest, the more motivated I am to keep working on it. How?</p>
+										<p>If you sign up, you show me others out there are interested in this. I built this for personal use and as a fun project, but the more people that express interest, the more motivated I am to keep working on it. How?</p>
 										<ul>
-											<li>Follow on <a href="https://discord.gg/SUNJCKH5pH">Discord</a> (probably more active--also see icon on bottom right of page)</li>
-											<li>Join the email list below. (I'm just another guy who hates spam as much as you do--if I ever send you an email, it'll be rare, short, and to the point. I don't have anything to sell.)</li>
+											<li>Join us on <a href="https://discord.gg/SUNJCKH5pH">Discord</a> (preferred--also see icon on bottom right of page)</li>
+											<li> Don't do discord? Join the email list below. (I'm just another guy who hates spam as much as you do--if I ever send you an email, it'll be rare, short, and to the point. I don't have anything to sell.)</li>
 									</header>
 									<!-- <iframe src="https://discordapp.com/widget?id=868505374859345950&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe> -->
 									<div id="email-form"></div> 
@@ -272,8 +336,10 @@
 											<section class="col-2 col-1-small col-12-xsmall"></section>
 											<section class="col-8 col-10-small col-12-xsmall">
 												<div style="max-width:600px;">
-													<iframe id='kofiframe' src='https://ko-fi.com/kylev/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='kylev'></iframe>
-													<script type='text/javascript' src='https://ko-fi.com/widgets/CounterWidget.js'></script><script type='text/javascript'>counterwidget.init('C0C33CWNA');counterwidget.draw();</script>
+													<iframe id='kofiframe' src='https://ko-fi.com/kylev/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='512' title='kylev'></iframe>
+													
+													<!-- turning the counter off for now: -->
+													<!-- <script type='text/javascript' src='https://ko-fi.com/widgets/CounterWidget.js'></script><script type='text/javascript'>counterwidget.init('C0C33CWNA');counterwidget.draw();</script> -->
 												</div>
 											</section>
 										</div>

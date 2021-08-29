@@ -72,6 +72,7 @@ input, select, textarea {
 	appearance: none;
 }
 
+
 /* Basic */
 
 	html {
@@ -2535,6 +2536,12 @@ input, select, textarea {
 			display: block;
 		}
 
+		/* added by kyle, experiment */
+		.image video {
+			border-radius: 4px;
+			display: block;
+		}
+
 		.image.left {
 			float: left;
 			margin: 0 1.5em 1em 0;
@@ -2555,6 +2562,11 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			/* added by kyle, experiment */
+			.image.left video, .image.right video {
+				width: 100%;
+			}
+
 		.image.fit {
 			display: block;
 			margin: 0 0 2em 0;
@@ -2564,6 +2576,11 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+
+			/* added by kyle, experiment */
+			.image.fit video {
+				width: 100%;
+			}			
 
 /* List */
 
@@ -3077,6 +3094,11 @@ input, select, textarea {
 				position: relative;
 			}
 
+			/* experiment, added by kyle  */
+			.spotlight .image.main video {
+				position: relative;
+			}
+
 		.spotlight .content {
 			-moz-transform: translate(0,0);
 			-webkit-transform: translate(0,0);
@@ -3524,6 +3546,12 @@ input, select, textarea {
 			}
 
 				#banner .content .image img {
+					border-radius: 100%;
+					display: block;
+					width: 100%;
+				}
+				/* experiment, added by kyle */
+				#banner .content .image video {
 					border-radius: 100%;
 					display: block;
 					width: 100%;
