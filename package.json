@@ -6,5 +6,8 @@
     "start": "npx http-server",
     "tunnel": "ngrok http 8080",
     "deploy": "surge ./"
+  },
+  "devDependencies": {
+    "surge": "^0.23.1"
   }
 }
